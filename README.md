@@ -9,7 +9,7 @@ The app uses firebase authentication to authenticate user using google auth also
 * Firebase 9.0
 
 ## Setup
-Use node v16 to run this app.
+Use `node v16` to run this app.
 1. Run `npm install`
 2. Run `npm start` 
 3. This will run the app in `localhost:3000`
