@@ -30,7 +30,7 @@ function Modal({ visible, handleClose, handleOK }) {
                     CONFIRM
                 </Typography>
                 <Typography id="modal-modal-text" variant="h6" component="h2" sx={{ py: 1 }}>
-                    Are you sure you want to delete this chat room?
+                    Are you sure you want to leave this chat room?
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <Button variant="outlined" onClick={handleOK}>OK</Button>

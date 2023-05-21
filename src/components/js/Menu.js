@@ -3,11 +3,11 @@ import { styled, alpha } from '@mui/material/styles';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import LeaveIcon from '@mui/icons-material/ExitToApp';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { db, doc, collection, updateDoc, deleteDoc, serverTimestamp } from '../../firebase';
+import { db, doc, collection, updateDoc, deleteDoc, serverTimestamp} from '../../firebase';
 import RenameChat from './RenameChat';
 import Modal from './Modal';
 import { useHistory } from 'react-router';
@@ -74,7 +74,7 @@ export default function Menus({ roomId }) {
         }
         setRenameChat(false);
     };
-    const handleDelete = () => {
+    const handleLeave = () => {
         setAnchorEl(null);
         setOpenModal(true);
     };
@@ -112,9 +112,9 @@ export default function Menus({ roomId }) {
                     <EditIcon />
                     Edit
                 </MenuItem>
-                <MenuItem onClick={handleDelete} disableRipple>
-                    <DeleteIcon />
-                    Delete
+                <MenuItem onClick={handleLeave} disableRipple>
+                    <LeaveIcon />
+                    Leave
                 </MenuItem>
             </StyledMenu>
             <Modal visible={openModal} handleClose={() => setOpenModal(false)} handleOK={handleConfirmation} />
